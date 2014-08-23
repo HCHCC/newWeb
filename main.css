@@ -35,16 +35,18 @@ footer {
 }
 
 footer ul li {
-  width: 100px;
+  width: 500px;
   display: inline-block;
 }
 
 a {
-  color:gray;
+  font-size:2em ;
+  font-family:fantasy ;
+  color:yellow;
 }
 
 a:hover {
-  color:white;
+  color:green;
 }
 
 /* css不要用 ID SELECTOR (#) *
