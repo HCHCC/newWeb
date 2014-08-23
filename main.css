@@ -29,6 +29,12 @@ section {
   background-position: left bottom; 
 }
 
+.one{
+  font-size:2em ;
+  font-family:fantasy ;
+  color:green;
+  
+}
 footer {
   margin-bottom:200px;
   text-align:center;
