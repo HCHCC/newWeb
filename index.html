@@ -1,1 +1,86 @@
-11111111
+<!doctype html>
+<html>
+<head lang="zh-TW">
+  <meta charset="utf-8">
+  <title>中原大學資工系桌球隊</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<center>
+<table >
+<tr>
+  <td id="t11" >
+  <center>
+  <div style="color:orange;">
+  <font size="100" face="fantasy"><b>
+    強者的世界
+  </b></font>
+  </div><br><br><br><br>
+  </center>
+  </td>
+ 
+</tr>
+
+<tr>
+  <td id="t21" >
+  <center>
+  <div style="color:red;">
+  <font size="100" face="fantasy"><b>
+    王者的天下
+  </b></font>
+  </div><br><br><br><br>
+  </center>
+  </td>
+  
+</tr>
+
+<tr>
+  <td id="t31" >
+  <center>
+  <div style="color:white;">
+  <font size="100" face="fantasy"><b>
+    中原大學資工系桌球隊
+  </b></font>
+  </div><br><br><br><br>
+  </center>
+  
+  </td>
+</tr>
+
+<tr>
+  <td id="t41" >
+  <center>
+  <input type="button" style="color:black;" value="enter" onclick="location.href='要前往的網頁連結'">
+  </td>
+  </center>
+</tr>
+
+</table>
+
+<script>
+
+  $("#t11").fadeTo( 0,0.0);
+  $("#t21").fadeTo( 0,0.0);
+  $("#t31").fadeTo( 0,0.0);
+  $("#t41").fadeTo( 0,0.0);
+  // 處理顯示
+
+  $("#t11").fadeTo( 3000,1, function(){ 
+    $("#t21").fadeTo(3000,1,   function(){  
+      $("#t31").fadeTo(3000,1,   function(){
+        $("#t41").fadeTo(5000,1,   function(){
+        
+        });
+      });
+    });
+  });
+
+
+</script>
+</head>
+
+<body background="http://img.taopic.com/uploads/allimg/130714/240375-130G41P34039.jpg">
+
+
+</body>
+</html>
