@@ -1,6 +1,7 @@
 @charset: utf-8;
 div.bg{
   height:620px;
+  overflow:hidden;
   background-image:url(https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10176123_858176034196415_7076397432245555423_n.jpg);
   background-attachment:fixed;         
  background-repeat:no-repeat;          
