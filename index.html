@@ -1,89 +1,43 @@
 <!doctype html>
 <html>
-<head lang="zh-TW">
+<head lang="zh-TW"> <!-- web main language-->
   <meta charset="utf-8">
-  <title>中原大學資工系桌球隊</title>
+  <title>CYCU ICE TABLE TENNIS</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<center>
-<table >
-<tr>
-  <td id="t11" >
-  <center>
-  <div style="color:orange;">
-  <font size="100" face="fantasy"><b>
-    強者的世界
-  </b></font>
-  </div><br><br><br><br>
-  </center>
-  </td>
- 
-</tr>
 
-<tr>
-  <td id="t21" >
-  <center>
-  <div style="color:red;">
-  <font size="100" face="fantasy"><b>
-    王者的天下
-  </b></font>
-  </div><br><br><br><br>
-  </center>
-  </td>
-  
-</tr>
-
-<tr>
-  <td id="t31" >
-  <center>
-  <div style="color:white;">
-  <font size="100" face="fantasy"><b>
-    中原大學資工系桌球隊
-  </b></font>
-  </div><br><br><br><br>
-  </center>
-  
-  </td>
-</tr>
-
-<tr>
-  <td id="t41" >
-
-  <center>
-  <ul>
-    <li><a href="content1.html">e n t e r</a></li>
-  </ul>
-
-  </td>
-  </center>
-</tr>
-
+</head>
+<body >
+<div class="bg" id="t123">
+<div class="title">
+ <table>
+  <tr id="t11">    
+    <th >C</th>
+    <th >Y</th>
+    <th >C</th>
+    <th >U</th>
+  </tr>
+ </table><br>
+ <table class="ICE">
+  <tr>
+    <td class="ICE" >ICE</td>
+    <td class="TB" id="t22">Table Tennis</td>
+  </tr>
 </table>
 
 <script>
-
-  $("#t11").fadeTo( 0,0.0);
-  $("#t21").fadeTo( 0,0.0);
-  $("#t31").fadeTo( 0,0.0);
-  $("#t41").fadeTo( 0,0.0);
-  // 處理顯示
-
-  $("#t11").fadeTo( 3000,1, function(){ 
-    $("#t21").fadeTo(3000,1,   function(){  
-      $("#t31").fadeTo(3000,1,   function(){
-        $("#t41").fadeTo(5000,1,   function(){
-        
-        });
-      });
-    });
-  });
-
-
+    $("#t11").fadeTo( 0,0);
+    $("#t11").fadeTo( 1000,1);
+    $("#t22").fadeTo( 2000,0);
+    $("#t22").fadeTo( 1000,1);
 </script>
-</head>
-
-<body background="http://img.taopic.com/uploads/allimg/130714/240375-130G41P34039.jpg">
+</div>
+  <script>
+    $("#t123").fadeTo( 0000,0);
+    $("#t123").fadeTo( 4000,1);
+  </script>
+</div>
 
 
 </body>
