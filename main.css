@@ -82,11 +82,7 @@ td.TB{
   font-size:50px;
   text-shadow:0px 0px 15px #87CEEB; 
   animation: slidein3 5s forwards ; ;
-<<<<<<< HEAD
-  -webkit-animation: slidein3 5s forwards ;
-=======
-  -webkit-animation: slidein3 3s infinite; ;
->>>>>>> 5ff9b1fac092f7c65cced80d7ba24e84e8e53f01
+  -webkit-animation: slidein3 1s infinite; ;
   -moz-animation: slidein3 5s forwards;
 }
 @-webkit-keyframes slidein3 {
