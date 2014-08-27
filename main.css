@@ -45,6 +45,7 @@ th {
 
 td.ICE {
   font-size:90px;
+  font-family:cursive;
   animation: slidein2 3s forwards;
   -webkit-animation: slidein2 1s forwards;
   -moz-animation: slidein2 1s forwards;
@@ -80,6 +81,7 @@ td.ICE {
 }
 td.TB{
   font-size:50px;
+  font-family:cursive;
   text-shadow:0px 0px 15px #87CEEB; 
   animation: slidein3 5s forwards ; ;
   -webkit-animation: slidein3 1s infinite; ;
@@ -110,5 +112,42 @@ td.TB{
   }
 }
 
+
+.Menu ul{ margin:0;padding:0;list-style:none; background-image:url(http://www.photophoto.cn/m5/017/001/0170010055.jpg);}
+.ar{
+  width:290px; height:50px; line-height:50px; overflow:hidden; text-align:center;list-style-type: none; 
+  
+  font-size:30px;font-family:cursive;text-shadow:3px 3px #cccccc;-webkit-animation: slidein4 1s forwards;
+}
+@-webkit-keyframes slidein4 {
+  from {
+    padding-left: 100%;  
+    -webkit-transform:rotate(-0deg);
+  }
+  to {
+   padding-left: 0%;  
+   -webkit-transform:rotate(-15deg) ;
+  }
+}
+
+.br{
+  width:150px; height:50px; line-height:50px; overflow:hidden; text-align:center;list-style-type: none; 
+  font-size:30px;font-family:cursive;text-shadow:3px 3px #cccccc;-webkit-animation: slidein4 2s forwards;
+}
+.cr{
+  width:190px; height:50px; line-height:50px; overflow:hidden; text-align:center;list-style-type: none; 
+  font-size:30px;font-family:cursive;text-shadow:3px 3px #cccccc;-webkit-animation: slidein4 3s forwards;
+}
+.dr{
+  width:150px; height:50px; line-height:50px; overflow:hidden; text-align:center;list-style-type: none; 
+  font-size:30px;font-family:cursive;text-shadow:3px 3px #cccccc;-webkit-animation: slidein4 4s forwards;
+}
+
+.ar a{ width:290px;float:left;overflow:hidden; text-decoration:none; }
+.br a{ width:150px;float:left;overflow:hidden; text-decoration:none; font-weight: bold;}
+.cr a{ width:190px;float:left;overflow:hidden; text-decoration:none; font-weight: bold;}
+.dr a{ width:150px;float:left;overflow:hidden; text-decoration:none; font-weight: bold;}
+.Menu span{display:block;margin-top:-50px;font-family:Microsoft JhengHei;font-weight: bold;;}
+.Menu a:hover{padding-top:50px;}
 /* css不要用 ID SELECTOR (#) *
   
