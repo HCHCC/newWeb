@@ -4,8 +4,8 @@ div.bg{
   overflow:hidden;
   background-image:url(https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10176123_858176034196415_7076397432245555423_n.jpg);
   background-attachment:fixed;         
- background-repeat:no-repeat;          
- background-position: top right; 
+  background-repeat:no-repeat;          
+  background-position: top right; 
 }
 
 
@@ -150,5 +150,135 @@ td.TB{
 .dr a{ width:150px;float:left;overflow:hidden; text-decoration:none; font-weight: bold;}
 .Menu span{display:block;margin-top:-50px;font-family:Microsoft JhengHei;font-weight: bold;;}
 .Menu a:hover{padding-top:50px;}
-/* css不要用 ID SELECTOR (#) *
+/* css不要用 ID SELECTOR (#) */
   
+.content{
+  -webkit-animation: slidein5 2s forwards;
+}
+@-webkit-keyframes slidein5 {
+  from {
+     
+    -webkit-transform:skewX(-20deg);
+    
+  }
+  to {
+    
+   -webkit-transform:skewX(0deg);
+  }
+}
+
+.mesWindowContent2{font-size:40px;height:500px;background-image:url(圖片3.jpg);background-attachment:fixed;         
+  background-repeat:no-repeat;          
+  background-position: center right ;}
+  
+.contentslider {
+  position:relative;
+  display:block;
+  width:900px;
+  height:400px;
+  margin:0 auto;
+  overflow:hidden;
+}
+.cs_wrapper {
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+.cs_slider {
+  position:absolute;
+  width:10000px;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.cs_article {
+  float:left;
+  position:relative;
+  top:0;
+  left:0;
+  display:block;
+  width:900px;
+  height:400px;
+  margin:0 auto;
+  padding:0;
+}
+.cs_article h2 {
+  display:block;
+  width:26%;
+  margin:10px 26px 5px 67%;
+  text-align:left;
+}
+.cs_article img {
+  position:absolute;
+  top:0;
+  left:0;
+  width:66%;
+  border:0;
+  -ms-interpolation-mode:bicubic;
+}
+.cs_article p {
+  display:block;
+  width:26%;
+  margin:0 26px 5px 67%;
+  padding:0;
+  border:0;
+}
+.cs_article .readmore {
+  display:block;
+  width:26%;
+  margin:0 26px 0 67%;
+  text-align:right;
+}
+.cs_leftBtn, .cs_rightBtn {
+  position:absolute;
+  top:0;
+  height:400px;
+  padding:10px 0;
+  z-index:10000;
+}
+.cs_leftBtn {
+  left:0;
+  outline:0;
+}
+.cs_rightBtn {
+  right:0;
+  outline:0;
+}
+.cs_leftBtn img, .cs_rightBtn img {
+  border:0;
+  position:relative;
+  top:200px;
+  margin:0;
+}
+.contentslider {
+  padding:10px; /* This acts as a border for the content slider */
+  background:#333; /* This is the color of said border */
+}
+.cs_wrapper, .cs_article {
+  background:#FFF; /* Background color for the entries */
+}
+.cs_leftBtn, .cs_rightBtn {
+  width:30px; /* Should be as wide as the button graphic being used */
+  background:#333; /* This will probably match the contentslider bg color */
+}
+ 
+.cs_article h2 {
+  font-size:30px;
+  line-height:1.125em;
+}
+  .cs_article h2 a {
+    color:#333;
+    text-decoration:none;
+  }
+.cs_article p {
+  font-size:200%;
+  line-height:1.5em;
+  color:#777;
+}
+.cs_article .readmore {
+  font-size:80%;
+}

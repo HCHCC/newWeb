@@ -6,6 +6,162 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style>
+html,body{font-size:12px;margin:0px;height:100%;}
+.mesWindow{background:#fff;opacity:0.9 }
+.mesWindowContent{font-size:40px;height:500px;background-image:url(圖片1.jpg);background-attachment:fixed;         
+  background-repeat:no-repeat;          
+  background-position: left bottom ;}
+
+.mesWindow.close{border:none;cursor:pointer;background:#fff}
+.my{background-image: none; background-color:transparent;}
+
+</style>
+<script>
+var isIe=(document.all)?true:false;
+//設置select的可見狀態
+function setSelectState(state)
+{
+var objl=document.getElementsByTagName('select');
+for(var i=0;i<objl.length;i++)
+{
+objl[i].style.visibility=state;
+}
+}
+function mousePosition(ev)
+{
+if(ev.pageX || ev.pageY)
+{
+return {x:ev.pageX, y:ev.pageY};
+}
+return {
+x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,y:ev.clientY + document.body.scrollTop - document.body.clientTop
+};
+}
+//跳出方法
+function showMessageBox(wTitle,content,pos,wWidth)
+{
+closeWindow();
+var bWidth=parseInt(document.documentElement.scrollWidth);
+var bHeight=parseInt(document.documentElement.scrollHeight);
+if(isIe){
+setSelectState('hidden');}
+var back=document.createElement("div");
+back.id="back";
+var styleStr="top:0px;left:0px;position:absolute;background:#666;width:"+bWidth+"px;height:"+bHeight+"px;";// 淡化之面積
+styleStr+=(isIe)?"filter:alpha(opacity=0);":"opacity:0;";
+back.style.cssText=styleStr;
+document.body.appendChild(back);
+showBackground(back,50);
+var mesW=document.createElement("div");
+mesW.id="mesWindow";
+mesW.className="mesWindow";
+mesW.innerHTML="<div class='mesWindowTop'><table width='100%' height='22%'><tr><td>"+wTitle+"</td><td style='width:1px;'><input type='button' onclick='closeWindow() ;' title='關閉視窗' class='close' value='X' /></td></tr></table></div><div class='mesWindowContent' id='mesWindowContent'>"+content+"</div><div class='mesWindowBottom'></div>";
+styleStr="left:"+(((pos.x-wWidth)>0)?(pos.x-wWidth):pos.x)+"px;top:100px;position:absolute;width:"+wWidth+"px;";
+mesW.style.cssText=styleStr;
+document.body.appendChild(mesW);
+}
+
+function showMessageBox2(wTitle,content,pos,wWidth)
+{
+closeWindow();
+var bWidth=parseInt(document.documentElement.scrollWidth);
+var bHeight=parseInt(document.documentElement.scrollHeight);
+if(isIe){
+setSelectState('hidden');}
+var back=document.createElement("div");
+back.id="back";
+var styleStr="top:0px;left:0px;position:absolute;background:#666;width:"+bWidth+"px;height:"+bHeight+"px;";// 淡化之面積
+styleStr+=(isIe)?"filter:alpha(opacity=0);":"opacity:0;";
+back.style.cssText=styleStr;
+document.body.appendChild(back);
+showBackground(back,50);
+var mesW=document.createElement("div");
+mesW.id="mesWindow";
+mesW.className="mesWindow";
+mesW.innerHTML="<div class='mesWindowTop'><table width='100%' height='22%'><tr><td>"+wTitle+"</td><td style='width:1px;'><input type='button' onclick='closeWindow() ;' title='關閉視窗' class='close' value='X' /></td></tr></table></div><div class='mesWindowContent2' id='mesWindowContent'>"+content+"</div><div class='mesWindowBottom'></div>";
+styleStr="left:"+(((pos.x-wWidth)>0)?(pos.x-wWidth):pos.x)+"px;top:100px;position:absolute;width:"+wWidth+"px;";
+mesW.style.cssText=styleStr;
+document.body.appendChild(mesW);
+}
+
+function showMessageBox3(wTitle,content,pos,wWidth)
+{
+closeWindow();
+var bWidth=parseInt(document.documentElement.scrollWidth);
+var bHeight=parseInt(document.documentElement.scrollHeight);
+if(isIe){
+setSelectState('hidden');}
+var back=document.createElement("div");
+back.id="back";
+var styleStr="top:0px;left:0px;position:absolute;background:#666;width:"+bWidth+"px;height:"+bHeight+"px;";// 淡化之面積
+styleStr+=(isIe)?"filter:alpha(opacity=0);":"opacity:0;";
+back.style.cssText=styleStr;
+document.body.appendChild(back);
+showBackground(back,50);
+var mesW=document.createElement("div");
+mesW.id="mesWindow";
+mesW.className="mesWindow";
+mesW.innerHTML="<div class='mesWindowTop'><table width='100%' height='22%'><tr><td>"+wTitle+"</td><td style='width:1px;'><input type='button' onclick='closeWindow() ;' title='關閉視窗' class='close' value='X' /></td></tr></table></div><div class='mesWindowContent3' id='mesWindowContent'>"+content+"</div><div class='mesWindowBottom'></div>";
+styleStr="left:"+(((pos.x-wWidth)>0)?(pos.x-wWidth):pos.x)+"px;top:100px;position:absolute;width:"+wWidth+"px;";
+mesW.style.cssText=styleStr;
+document.body.appendChild(mesW);
+}
+//讓背景漸漸變暗
+function showBackground(obj,endInt)
+{
+if(isIe)
+{
+obj.filters.alpha.opacity+=1;
+if(obj.filters.alpha.opacity<endInt)
+{
+setTimeout(function(){showBackground(obj,endInt)},5);
+}
+}else{
+var al=parseFloat(obj.style.opacity);al+=0.01;
+obj.style.opacity=al;
+if(al<(endInt/100))
+{setTimeout(function(){showBackground(obj,endInt)},5);}
+}
+}
+//關閉視窗
+function closeWindow()
+{
+if(document.getElementById('back')!=null)
+{
+document.getElementById('back').parentNode.removeChild(document.getElementById('back'));
+}
+if(document.getElementById('mesWindow')!=null)
+{
+document.getElementById('mesWindow').parentNode.removeChild(document.getElementById('mesWindow'));
+}
+if(isIe){
+setSelectState('');}
+}
+//測試跳出
+function testMessageBox1(ev)
+{
+var objPos = mousePosition(ev);
+messContent=
+"<div class='content' style='background-image: none; background-color:transparent;padding:10px 0 30px 10px;text-align:right;  font-family:Microsoft JhengHei '><div class='my'><b><br>一群熱愛桌球的人&nbsp;&nbsp;<br><br>在這裡散發熱情&nbsp;&nbsp;<br><br>共同努力 切磋&nbsp;&nbsp;<br><br>系桌是個大家庭 充滿著溫暖 :)&nbsp;&nbsp;<br><br></b></div> </div>";
+showMessageBox('&nbsp;',messContent,objPos,1000);
+}
+function testMessageBox2(ev)
+{
+var objPos = mousePosition(ev);
+messContent=
+"<div class='content' style='background-image: none; background-color:transparent;padding:10px 0 30px 10px;text-align:left;  font-family:Microsoft JhengHei '><div class='my'><b>練習時間:<br>&nbsp;&nbsp;每周三、五<br>&nbsp;&nbsp;5:30~9:00p.m.<br><br>隊長: <a href='https://www.facebook.com/benjamin.chen.716970?fref=ts' style='text-decoration:none;'>老班 </a> </b></div> </div>";
+showMessageBox2('&nbsp;',messContent,objPos,1000);
+}
+function testMessageBox3(ev)
+{
+var objPos = mousePosition(ev);
+messContent=
+"<div class='content' style='background-image: none; background-color:transparent;padding:10px 0 30px 10px;text-align:left;  font-family:Microsoft JhengHei '><div class='cs_article'><h2> <b>北資盃 奪獎盃</b> </h2><a href='#'><img src='https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10176123_858176034196415_7076397432245555423_n.jpg'/></a><p>我們真的很強! </p></div><!-- End cs_article --></div> </div>";
+showMessageBox3('&nbsp;',messContent,objPos,1000);
+}
+
+</script>
  
 </head>
 <body >
@@ -39,11 +195,11 @@
   </script>
   <div class="row">
     <ul class="Menu"> 
-      &nbsp;<li class="ar"><a href="#"><span>社 團 介 紹</span><b>I</b> n t r o d u c t i o n</a></li> <br><br>
-      <li class="br"><a href="#"><span>加 入 我 們</span><b>J</b>oin&nbsp;&nbsp; <b>U</b>s</a></li> <br>
-      <li class="cr"><a href="#"><span>輝 煌 歷 史</span><b>A</b>  w a r d s</a></li> <br>
+      &nbsp;<li class="ar"><a href="#" onclick="testMessageBox1(event);"><span>社 團 介 紹</span><b>I</b> n t r o d u c t i o n</a></li> <br><br>
+      <li class="br"><a href="#" onclick="testMessageBox2(event);"><span>加 入 我 們</span><b>J</b>oin&nbsp;&nbsp; <b>U</b>s</a></li> <br>
+      <li class="cr"><a href="#" onclick="testMessageBox3(event);"><span>輝 煌 歷 史</span><b>A</b>  w a r d s</a></li> <br>
 
-      <li class="dr"><a href="#"><span>回 憶 錄</span><b>P</b> h o t o</a></li> 
+      <li class="dr"><a href="https://www.facebook.com/groups/266361263387125/photos/"><span>回 憶 錄</span><b>P</b> h o t o</a></li> 
     </ul>
   </div>
       
